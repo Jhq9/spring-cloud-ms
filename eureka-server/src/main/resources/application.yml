@@ -1,0 +1,26 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: register-center
+eureka:
+  instance:
+    hostname: localhos
+    appname: register-center
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+#eureka:
+  ## for test and dev environment
+  ## 关闭自我保护机制
+  #server:
+   # enable-self-preservation: false
+   ## 开启健康检查
+  #client:
+    #healthcheck:
+     #enableed:true
+  ## 持续更新时间间隔 and 持续到期时间
+  #instance:
+      #lease-renewal-interval-in-seconds: 10
+      #lease-expiration-duration-in-seconds: 30

@@ -1,0 +1,16 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: account-ms
+  profiles:
+    active: dev
+  #配置消息总线，实现自动化修改其他微服务的配置信息
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: may
+    password: whyjhqlove512
+management:
+  security:
+    enabled: false

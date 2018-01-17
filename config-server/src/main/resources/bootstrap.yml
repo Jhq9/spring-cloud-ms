@@ -1,0 +1,33 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: dev
+  #配置消息总线，实现自动化修改其他微服务的配置信息
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: may
+    password: whyjhqlove512
+  #配置其他微服务配置文件的git仓库地址
+  cloud:
+    bus:
+      trace:
+        enabled: false
+    config:
+      server:
+        git:
+          uri: http://gitlab.isa.qa/jinhuaquan/seniors.git
+          search-paths: config-repo
+          username: jinhuaquan
+          password: whyjhqlove512
+          #clone-on-start: true
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/

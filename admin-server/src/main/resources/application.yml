@@ -1,0 +1,12 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: admin-server
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
